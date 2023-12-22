@@ -9,6 +9,7 @@ mkdir -p /var/lib/rancher/rke2/data; \
 mkdir -p /var/lib/rancher/rke2/storage; \
 mkdir -p /var/run/flannel; \
 mkdir -p /var/run/k3s; \
+mkdir -p /data; \
 restorecon -R -i /etc/systemd/system/rke2.service; \
 restorecon -R -i /usr/lib/systemd/system/rke2.service; \
 restorecon -R -i /var/log/audit-sensor-api.log; \
@@ -17,6 +18,7 @@ restorecon -R /opt/cni; \
 restorecon -R /var/lib/kubelet; \
 restorecon -R /var/lib/rancher; \
 restorecon -R /var/run/k3s; \
+restorecon -R /data; \
 restorecon -R /var/run/flannel
 
 %define selinux_policyver 3.13.1-252

@@ -29,7 +29,7 @@
 # corelight specific
 # yq -P '. as $item ireduce ({}; . *+ $item) | .spec.template.spec.volumes[].hostPath.path|select(.!=null) ' pkg/corelightctl/resources/manifests/manifest-sensor-rke2.yaml | grep /data
 /var/lib/rancher/rke2/storage(/.*)?                                     gen_context(system_u:object_r:container_file_t,s0)
-/data/(/.*)                                                             gen_context(system_u:object_r:container_file_t,s0)
+/data(/.*)                                                              gen_context(system_u:object_r:container_file_t,s0)
 
 # still have to figure out
 #/
