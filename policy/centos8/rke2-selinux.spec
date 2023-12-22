@@ -6,6 +6,7 @@ mkdir -p /opt/cni; \
 mkdir -p /var/lib/kubelet/pods; \
 mkdir -p /var/lib/rancher/rke2/agent/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots; \
 mkdir -p /var/lib/rancher/rke2/data; \
+mkdir -p /var/lib/rancher/rke2/storage; \
 mkdir -p /var/run/flannel; \
 mkdir -p /var/run/k3s; \
 restorecon -R -i /etc/systemd/system/rke2.service; \
